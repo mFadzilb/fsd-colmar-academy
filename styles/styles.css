@@ -5,7 +5,7 @@
 *{
     margin: 0; 
     padding: 0;
-    outline: 1px dashed #ddd;
+    /*outline: 1px dashed #000; /*#fff to make into very fine line*/
 }
 
 html{
@@ -98,21 +98,33 @@ nav ul li{
 
 /* Set up header area */
 header{
-    background-color:#d8d8d8;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#d8d8d8;
+}
+
+.imgcontainer{
+    padding: 2rem 1.5rem;
 }
 
 header img{
-    width: 100%;
-    padding-left: 2rem 1.5rem;
+    max-width: 100%;
+    height: auto;
 }
 
-header > div{
+header > div{   
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 1.5rem;
+    justify-content: space-evenly;
+    height: 18rem;
+    padding-right: 2rem;/* created padding for start button for right header*/
+    
 }
+
+/* header:last-child > div{
+    border: 1px solid #black;
+} */
 
 header div > h1{
     font-size: xx-large;
@@ -133,9 +145,112 @@ header div > a{
 
 /* hover effect for call to action link */
 
-
 /* Set up practice section */
 
+.practice{
+    display: flex;                  /* Enable flexbox layout  */
+    align-items: center;            /* Centers content vertically */
+    justify-content: center;        /* Center content horizontally */
+    flex-direction: column;
+}
+
+.practice > .imgcontainer > img{
+    max-width: 100%;
+    height: auto;
+}
+
+.practice > .practice-text{
+    padding: 0 1.5rem;
+}
+
+.practice > .practice-text > h1{
+    font-size: xx-large;
+    margin-bottom: 1.5rem;
+}
+
+.practice > .practice-text > p{
+    font-size: small;
+    font-weight: lighter;
+}
+
+.practice > .practice-text > p > span{
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    padding: 2rem 0;
+}
+
+/* Set up events section */
+
+.events{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    border-left: 1px solid #e7e7e7;
+
+}
+
+.events .events-block:first-child{
+    padding-top: 2rem;
+}
+
+.events .events-block{
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 1rem;
+}
+
+.events img{
+    width: 100%;
+    height: auto;
+}
+
+.events .events-text{
+    margin-left: 1rem;
+    height: 100%;
+    align-content: center;
+}
+
+.events .events-text h3{
+    font-size: large;
+
+}
+
+.events .events-text p{
+    font-size: small;
+
+}
+
+.events .events-text a{
+    font-size: small;
+    color:#3434c6;
+
+}
+
+/* Set up Footer*/
+footer{
+    font-size: 0.8rem;
+    display: flex;
+    grid-column: full-start / full-end;
+    justify-content: space-between;
+    border-top: 1px solid #e7e7e7;
+    padding-bottom: 1rem 1.5rem 2rem;
+
+}
+
+footer > ul {
+    list-style: none;
+    display: flex;
+}
+
+footer > ul > li{
+    margin-right: 0.5rem;
+}
+
+footer > ul > li > a{
+    color: #3434c6;
+}
 
 /* Hide events mobile */
 
