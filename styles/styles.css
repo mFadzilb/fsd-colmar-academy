@@ -5,7 +5,7 @@
 *{
     margin: 0; 
     padding: 0;
-    /*outline: 1px dashed #000; /*#fff to make into very fine line*/
+    /* outline: 1px dashed #000;*/   /*#fff to make into very fine line*/
 }
 
 html{
@@ -58,6 +58,7 @@ nav ul li{
 nav ul li:last-child{
     padding-right: 1.5rem;
 }
+
 
 nav ul li a{
     font-size:0.75rem ;
@@ -117,21 +118,22 @@ header > div{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 18rem;
+    height: 34.5rem;
     padding-right: 2rem;/* created padding for start button for right header*/
     
 }
 
-/* header:last-child > div{
-    border: 1px solid #black;
-} */
-
 header div > h1{
     font-size: xx-large;
+    text-align: left;
+    padding-left: 2rem;
 }
 
 header div > h2{
     font-size: large;
+    text-align: left;
+    padding-left: 2rem;
+    /* padding-bottom: 0rem; */
 }
 
 header div > a{
@@ -140,7 +142,8 @@ header div > a{
     background-color: #484848; /*hex code with alpha*/
     color: white;
     text-align: center;
-    padding: 0.5rem 0; /*top bottom left-right*/
+    padding: 1rem 2rem; /*top bottom left-right*/
+    
 }
 
 /* hover effect for call to action link */
@@ -165,12 +168,14 @@ header div > a{
 
 .practice > .practice-text > h1{
     font-size: xx-large;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 
 .practice > .practice-text > p{
     font-size: small;
     font-weight: lighter;
+    text-align: left;
 }
 
 .practice > .practice-text > p > span{
@@ -193,6 +198,10 @@ header div > a{
     padding-top: 2rem;
 }
 
+.events .events-block:last-child{
+    background-color:#d8d8d8;
+} 
+
 .events .events-block{
     display: grid;
     grid-template-columns: 0.35fr 0.65fr;
@@ -201,32 +210,213 @@ header div > a{
     padding: 1rem;
 }
 
-.events img{
+.events > .events-block > .events-img-desktop{
     width: 100%;
     height: auto;
 }
 
-.events .events-text{
+.events > .events-block > .events-text{
     margin-left: 1rem;
     height: 100%;
     align-content: center;
 }
 
-.events .events-text h3{
+.events > .events-block > .events-text-lmobile{
+    display: none;
+}
+
+.events > .events-block > .events-text h3{
+    
     font-size: large;
-
+    text-align: left;
 }
 
-.events .events-text p{
+.events > .events-block > .events-text p{
+    padding-top: 0.5rem;
     font-size: small;
-
+    text-align: left;
 }
 
-.events .events-text a{
+.events > .events-block > .events-text a{
     font-size: small;
     color:#3434c6;
+}
+
+/* Setup for learning for desktop */
+
+.learning{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-column: full-start / full-end;
+    grid-template-rows: repeat(1, min-content);
+    border-left: 1px solid #e7e7e7;
+    padding-top: 2rem;
+    /* padding-bottom: 2rem; */
+    background-color: #d8d8d8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+   width: 100%;
+   text-align: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 32px;
+    color: #333;
+  }
+  
+  .cards-container {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-column: full-start / full-end;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #d8d8d8;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    gap: 32px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card h3 {
+    font-size: 1.5em;
+    margin: 16px 0 8px;
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  .card .course-type {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .card p {
+    font-size: 0.9em;
+    color: #555;
+    padding: 0 16px 16px;
+    line-height: 1.4;
+  }
+  
+
+/* Setup for Thesis and video for desktop */
+.video-container{
+    .video-container{
+        max-width: 400px;  /* Set a maximum width for the container*/
+        /*margin: 20px auto; /* Center the container */
+        /* text-align: center; */ /* Optional: centers the video inside the container */
+    }
+    video {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%; /* Video will scale to the container's width */
+        /*max-width: 300px; /* Optional: set a maximum width for the video */
+        height: 100%; /* Maintains aspect ratio */
+        display: block; /* Ensures the video behaves like a block element */
+    }
+}
+
+/* setup for Thesis */
+
+.thesis{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-column: full-start / full-end;
+    grid-template-rows: repeat(1, min-content);
+    border-left: 1px solid #e7e7e7;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.thesis .text{
+    display:block;
+}
+
+.thesis > .text-mobile{
+    display: none;
+}  
+
+.video > .thesis-block > h2{
+    font-size: large;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.video > .thesis-block > p{
+    font-size: small;
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+}
+
+.thesis{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    border-left: 1px solid #e7e7e7;
 
 }
+
+
+
+.events > .events-block > .events-img-desktop1{
+    width: 100%;
+    height: auto;
+}
+
+.events > .events-block > .events-text1{
+    margin-left: 1rem;
+    height: 100%;
+    align-content: center;
+    text-align: left;
+}
+
+.events > .events-block > .events-text1 h3{
+    font-size: large;
+    text-align: left;
+}
+
+.events > .events-block > .events-text1 p{
+    padding-top: 0.5rem;
+    font-size: small;
+    text-align: left;
+}
+
+
 
 /* Set up Footer*/
 footer{
@@ -235,8 +425,7 @@ footer{
     grid-column: full-start / full-end;
     justify-content: space-between;
     border-top: 1px solid #e7e7e7;
-    padding-bottom: 1rem 1.5rem 2rem;
-
+    padding: 1rem 1.5rem 2rem;
 }
 
 footer > ul {
@@ -252,11 +441,21 @@ footer > ul > li > a{
     color: #3434c6;
 }
 
-/* Hide events mobile */
+/* Responsive section */
 
+/*Hide nav for mobile */
+#nav-mobile{
+    display: none;
+}
+
+/* Hide events mobile */
+.events > .events-block > .events-img-mobile{
+    display: none;
+}
 
 /** ********************** **/
 /** End of Desktop Section **/
+
 
 
 /* TODO */
@@ -267,6 +466,153 @@ footer > ul > li > a{
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
 @media screen and (max-width: 40rem ) {
     
+    /*hide desktop nav*/
+    nav, .practice{
+        display: none;
+    }  
+    /*Display navbar*/
+    #nav-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        grid-column: full-start/full-end;
+        height: 4rem;
+        /* border: 1px solid #0000; */
+    }
+
+    /*Set header image to take up entire screen*/
+    header{
+        display: grid;
+        grid-column: full-start/full-end;
+    }
+    
+    .imgcontainer{
+        padding: 0;
+    }
+
+    header > div{
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    header > div > h2{
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .events{
+        display: grid;
+        grid-column: full-start / full-end;
+        border-left: none;
+    }
+
+    .events > .events-block{
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 1rem 0 1rem;
+        border-bottom: none;
+    }
+
+    .events > .events-block:first-child{
+        padding-top: 1rem;
+    }
+
+    .events > .events-block:last-child{
+        padding-bottom: 1rem;
+        background: none; 
+    }
+
+    .events > .events-block > .events-img-desktop{
+       display: none;
+        
+    }
+
+    .events > .events-block > .events-img-mobile{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .events > .events-block > .events-text{
+        /* border: 1px solid #000; */     /* use this to create box to see the adjustment */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 5rem;
+        margin-left: 1rem;
+
+    }
+
+    /* Setup Learning for Mobile*/
+
+    .learning{
+        background-color: #fff;
+    }
+
+    .cards-container{
+        background-color: #fff;
+    }
+
+    .cards-container > .card{
+        background-color: #aaa;
+        margin-top: 1rem;
+        width: flex;
+    }
+
+    .cards-container > .card img{
+        display: none;
+    
+    } 
+
+    .cards-container > .card p{
+        display: none;
+        
+    } 
+
+    .cards-container{
+        display: block;
+        /* background-color: #aaa; */
+
+    }
+
+    /* Setup Thesis for Mobile*/
+    .thesis .text{
+        display:none;
+    }
+    
+    .thesis > .text-mobile{
+        display:block;
+    }  
+
+    .video > .video-container {
+        width:90dvw;
+
+    }
+
+    .video > .thesis-block > h2{
+        display: none;
+    }
+    
+    .video > .thesis-block > p{
+        display: none;
+    }
+
+    .events > .events-block > .events-img-desktop1{
+        display: none;
+    }
+    
+    .events > .events-block > .events-text1{
+        display: none;
+    }
+    
+    /* Set footer for mobile*/
+
+    footer > ul{
+        display: none;
+    }
 
 }
 
