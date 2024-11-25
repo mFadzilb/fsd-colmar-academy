@@ -5,7 +5,7 @@
 *{
     margin: 0; 
     padding: 0;
-    /* outline: 1px dashed #000;*/   /*#fff to make into very fine line*/
+    /* outline: 1px dashed #000; */   /*#fff to make into very fine line*/
 }
 
 html{
@@ -98,6 +98,7 @@ nav ul li{
 
 
 /* Set up header area */
+
 header{
     display: flex;
     align-items: center;
@@ -118,9 +119,12 @@ header > div{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 34.5rem;
+    height: 34.5rem; /* Issue height  */
     padding-right: 2rem;/* created padding for start button for right header*/
-    
+}
+
+header > div > div { /* Assuming the columns are child divs */
+    flex: 1; /* Equal flex for both columns */
 }
 
 header div > h1{
